@@ -2,7 +2,9 @@
 <package>
   <name>gazebo_radar_plugin</name>
   <version>0.0.0</version>
-  <description>The gazebo_radar_plugin package</description>
+  <description>The gazebo_radar_plugin package
+This provides a Mode-C like radar response for each radar sensor.
+</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag --> 
   <!-- Example:  -->
