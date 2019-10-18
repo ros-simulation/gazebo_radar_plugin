@@ -23,7 +23,7 @@
 
 #include <sdf/sdf.hh>
 
-#include "gazebo/math/Pose.hh"
+#include "ignition/math/Pose3.hh"
 #include "gazebo/common/Plugin.hh"
 #include "gazebo/common/UpdateInfo.hh"
 #include "gazebo/msgs/logical_camera_image.pb.h"
@@ -92,12 +92,12 @@ namespace gazebo
     protected: bool ModelTypeToPublish(const std::string & modelType);
 
     /// \brief Add noise to a model pose
-    protected: void AddNoise(math::Pose & pose);
+  protected: void AddNoise(ignition::math::Pose3d & pose);
 
     // \brief Add a radar contact to a radar contact summary if it's within parameters
     protected: void AppendRadarContact(
       gazebo_radar_plugin::ModeCRadarSummary & radar_msg,
-      const math::Pose & cameraPose, const math::Pose & modelPose,
+      const ignition::math::Pose3d & cameraPose, const ignition::math::Pose3d & modelPose,
       const uint16_t code, const std_msgs::Header & header);
 
     /// \brief Node for communication with gazebo
